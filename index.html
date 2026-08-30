@@ -3,28 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="VANTA Athletics — engineered gym wear for your next personal best." />
-    <title>VANTA Athletics — Built for the push</title>
+    <meta name="description" content="MAVINWEAR — high-performance gym wear for your next personal best." />
+    <title>MAVINWEAR — Built for the push</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mavin-theme.css" />
+    <link rel="stylesheet" href="mavin-components.css" />
   </head>
   <body>
     <div class="announcement"><span>GUARANTEED RETURNS &amp; EXCHANGES</span><span>•</span><span>FREE SHIPPING ON ORDERS OVER $100</span><a href="#reviews">4.9 / 5 FROM ATHLETES ↗</a></div>
     <header class="site-header">
       <button class="icon-button mobile-only" aria-label="Open menu" id="menuButton"><i class="icon menu-icon"></i></button>
-      <a class="logo" href="#top" aria-label="Vanta Athletics home">VANTA<span>®</span></a>
+      <a class="logo" href="#top" aria-label="Mavinwear home">MAVIN<span>®</span></a>
       <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="#shop">New arrivals</a><a href="#categories">Men</a><a href="#categories">Women</a><a href="#shop">Best sellers</a><a href="#categories">Accessories</a>
+        <a href="#shop">New arrivals</a><button class="mega-trigger" data-menu="men">Men +</button><button class="mega-trigger" data-menu="women">Women +</button><button class="mega-trigger" data-menu="collections">Collections +</button><a href="#shop">Best sellers</a>
       </nav>
       <div class="header-actions">
         <button class="icon-button search-toggle" aria-label="Search"><i class="icon search-icon"></i></button>
-        <button class="icon-button desktop-only" aria-label="Account"><i class="icon user-icon"></i></button>
+        <button class="icon-button desktop-only notification-trigger" aria-label="Notifications">●</button>
+        <button class="icon-button desktop-only auth-trigger" aria-label="Account"><i class="icon user-icon"></i></button>
         <button class="cart-button" aria-label="Open shopping bag" id="cartButton"><i class="icon bag-icon"></i><b id="cartCount">0</b></button>
       </div>
     </header>
-    <div class="search-panel" id="searchPanel"><input autofocus placeholder="Search VANTA" /><button aria-label="Close search">×</button></div>
+    <div class="mega-panel" id="megaPanel"></div>
+    <div class="notification-panel" id="notificationPanel"><b>NOTIFICATIONS</b><button>×</button><a href="#shop"><strong>NEW DROP: FORM SYSTEM</strong><small>Lightweight essentials made for every rep.</small></a><a href="#shop"><strong>CORE SEAMLESS RESTOCKED</strong><small>Your most-wanted tee is back in stock.</small></a></div>
+    <aside class="auth-panel" id="authPanel"><button>×</button><p class="eyebrow">MAVIN MEMBER</p><h2>Train. Track.<br /><em>Return stronger.</em></h2><p>Shop your styles, save your favourites, track your orders, and get early access to drops.</p><ul><li>Track orders in real time</li><li>Save your favourite fits</li><li>Unlock early access</li></ul><a class="button button-accent" href="#">Sign in <span>↗</span></a></aside>
+    <div class="search-panel" id="searchPanel"><input autofocus placeholder="Search MAVINWEAR" /><button aria-label="Close search">×</button></div>
 
     <main id="top">
       <section class="hero">
@@ -56,9 +62,9 @@
         </div>
       </section>
 
-      <section class="performance-block"><div class="performance-copy"><p class="eyebrow">THE VANTA STANDARD</p><h2>Made to take<br />a <em>beating.</em></h2><p>Relentlessly tested technical fabrics. Zero distractions. Every detail has a reason.</p><a href="#pdp" class="text-link">Discover the technology <span>↗</span></a></div><div class="performance-image"><img src="https://images.unsplash.com/photo-1600965962102-9d260a71890d?auto=format&fit=crop&w=1300&q=85" alt="Athlete preparing for a workout" /><div class="tech-tag"><span>V</span><div><b>4-WAY STRETCH</b><small>Move without limits</small></div></div></div></section>
+      <section class="performance-block"><div class="performance-copy"><p class="eyebrow">THE MAVIN STANDARD</p><h2>Made to take<br />a <em>beating.</em></h2><p>Relentlessly tested technical fabrics. Zero distractions. Every detail has a reason.</p><a href="#pdp" class="text-link">Discover the technology <span>↗</span></a></div><div class="performance-image"><img src="https://images.unsplash.com/photo-1600965962102-9d260a71890d?auto=format&fit=crop&w=1300&q=85" alt="Athlete preparing for a workout" /><div class="tech-tag"><span>M</span><div><b>4-WAY STRETCH</b><small>Move without limits</small></div></div></div></section>
 
-      <section class="newsletter"><div><p class="eyebrow">JOIN THE MOVEMENT</p><h2>Get <em>10% off</em><br />your first order.</h2></div><form id="newsletterForm"><label for="email">YOUR EMAIL ADDRESS</label><div><input id="email" type="email" placeholder="you@email.com" required /><button class="button button-accent">Unlock my 10% <span>↗</span></button></div><small>By subscribing, you agree to receive marketing emails from VANTA.</small></form></section>
+      <section class="newsletter"><div><p class="eyebrow">JOIN THE MOVEMENT</p><h2>Get <em>10% off</em><br />your first order.</h2></div><form id="newsletterForm"><label for="email">YOUR EMAIL ADDRESS</label><div><input id="email" type="email" placeholder="you@email.com" required /><button class="button button-accent">Unlock my 10% <span>↗</span></button></div><small>By subscribing, you agree to receive marketing emails from MAVINWEAR.</small></form></section>
     </main>
 
     <section class="pdp section-pad" id="pdp">
@@ -67,7 +73,7 @@
     </section>
 
     <section class="reviews section-pad" id="reviews"><div><p class="eyebrow">FIELD TESTED</p><h2>“Best shorts<br />I’ve ever <em>trained in.</em>”</h2></div><div class="review-card"><div class="rating">★★★★★</div><p>“The fit is dialed in, the pockets don’t bounce, and the fabric actually holds up to heavy sessions. Instant repeat buy.”</p><div><b>Marcus T.</b><span>Verified buyer</span></div></div></section>
-    <footer><a class="logo" href="#top">VANTA<span>®</span></a><p>MAKE YOUR MOVE.</p><div><a href="#shop">Shop</a><a href="#top">Instagram</a><a href="#top">Support</a></div><small>© 2026 VANTA ATHLETICS. ALL RIGHTS RESERVED.</small></footer>
+    <footer><a class="logo" href="#top">MAVIN<span>®</span></a><p>MAKE YOUR MOVE.</p><div><a href="#shop">Shop</a><a href="#top">Instagram</a><a href="#top">Support</a></div><small>© 2026 MAVINWEAR. ALL RIGHTS RESERVED.</small></footer>
 
     <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag" aria-hidden="true"><div class="cart-head"><h2>Your bag <span id="cartItemText">(0)</span></h2><button class="close-cart" aria-label="Close cart">×</button></div><div class="cart-empty" id="cartEmpty"><p>Your bag is ready for a challenge.</p><a href="#shop" class="text-link">Shop bestsellers <span>↗</span></a></div><div class="cart-item" id="cartItem" hidden><img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=250&q=70" alt="Form shorts" /><div><h3>Form 6” Shorts</h3><p>Black / Volt · M</p><div class="quantity"><button id="decrease">−</button><span id="quantity">1</span><button id="increase">+</button></div></div><strong id="cartPrice">$52</strong></div><div class="cart-footer"><div><span>Subtotal</span><strong id="subtotal">$0</strong></div><p>Shipping and taxes calculated at checkout.</p><button class="button button-accent checkout">Secure checkout <span>↗</span></button><div class="express"><button> Pay</button><button>G Pay</button></div></div></aside><div class="overlay" id="overlay"></div>
     <div class="mobile-cart-bar"><span>Form 6” Shorts<br /><b>$52</b></span><button class="button button-accent" id="mobileAdd">Add to bag</button></div>
